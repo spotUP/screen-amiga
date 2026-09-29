@@ -32,6 +32,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/uio.h>	/* struct iovec (POSIX puts it here; ixemul's sys/socket.h does not include it) */
 #include <fcntl.h>
 # include <sys/socket.h>
 # ifdef _OpenBSD_

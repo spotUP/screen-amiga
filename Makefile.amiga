@@ -1,0 +1,34 @@
+# GNU screen for AmigaOS 3.x + ixemul (UP-Term P7.1). Cross build with
+# bebbo's gcc against the ixemul SDK and the GG ncurses 5.5 (termcap).
+#   make -f Makefile.amiga         -> screen (m68k, needs ixemul 48.2 UP-Term)
+# amiga/ holds config.h (hand-made, see its head) and the files screen's
+# build generates with host tools (comm.h term.h kmapdef.c tty.c osdef.h).
+AGCC    ?= $(HOME)/opt/amiga/bin/m68k-amigaos-gcc
+NCURSES ?= $(HOME)/Code/vtcon/build/rig/vtc/pkgs/ncurses-5.5-1-p-bin-m68k
+CFLAGS  = -mcrt=ixemul -O2 -fgnu89-inline -Wall -Wno-unused -Wno-parentheses -Iamiga -I. \
+          -I$(NCURSES)/include -I$(NCURSES)/include/ncurses \
+          -DETCSCREENRC='"/ENV/screenrc"' -DSCREENENCODINGS='"/ENV/screen/utf8encodings"' -DGIT_REV='"4.9.1-amiga"'
+LIBS    = -L$(NCURSES)/lib -lncurses -lixcompat
+
+SRCS = screen.c ansi.c fileio.c mark.c misc.c resize.c socket.c \
+	search.c term.c window.c utmp.c loadav.c putenv.c help.c \
+	termcap.c input.c attacher.c pty.c process.c display.c comm.c \
+	acls.c braille.c braille_tsi.c logfile.c layer.c \
+	sched.c teln.c nethack.c encoding.c canvas.c layout.c viewport.c \
+	list_display.c list_generic.c list_window.c
+GEN  = amiga/tty.c amiga/kmapdef.c
+OBJS = $(addprefix obj/,$(SRCS:.c=.o)) obj/tty.o obj/kmapdef.o
+
+screen: $(OBJS)
+	$(AGCC) -mcrt=ixemul -o $@ $(OBJS) $(LIBS)
+
+obj/%.o: %.c amiga/config.h
+	@mkdir -p obj
+	$(AGCC) $(CFLAGS) -c -o $@ $<
+
+obj/%.o: amiga/%.c amiga/config.h
+	@mkdir -p obj
+	$(AGCC) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm -rf obj screen
