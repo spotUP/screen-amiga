@@ -1205,6 +1205,42 @@ char **namep;
  * between win->w_tty and open(ttyn)
  *
  */
+#ifdef VFORK_ONLY
+#include <stdarg.h>
+/* A vfork child's messages: to its own stderr (the window's pty once it
+ * is set up), never through the displays, which are the parent's. */
+static void
+VforkMsg(int err, const char *fmt, ...)
+{
+  char buf[256];
+  va_list ap;
+  int n;
+
+  va_start(ap, fmt);
+  vsnprintf(buf, sizeof(buf) - 64, fmt, ap);
+  va_end(ap);
+  n = strlen(buf);
+  if (err)
+    n += snprintf(buf + n, sizeof(buf) - n, ": %s", strerror(err));
+  buf[n++] = '\r';
+  buf[n++] = '\n';
+  write(2, buf, n);
+}
+
+static void
+VforkPanic(int err, const char *fmt, ...)
+{
+  char buf[200];
+  va_list ap;
+
+  va_start(ap, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  VforkMsg(err, "%s", buf);
+  _exit(1);
+}
+#endif
+
 static int
 ForkWindow(win, args, ttyn)
 struct win *win;
@@ -1247,10 +1283,26 @@ char **args, *ttyn;
     }
   fflush(stdout);
   fflush(stderr);
+#ifdef VFORK_ONLY
+  /* vfork: until its exec the child shares the parent's data and heap,
+   * so it only changes what is its own (descriptors, session, tty modes,
+   * directory, signal handling -- ixemul keeps these per process), and it
+   * reports failure itself instead of through the displays */
+# define Panic VforkPanic
+# define Msg VforkMsg
+  switch (pid = vfork())
+#else
   switch (pid = fork())
+#endif
     {
     case -1:
+#ifdef VFORK_ONLY
+# undef Msg
+      Msg(errno, "vfork");
+# define Msg VforkMsg
+#else
       Msg(errno, "fork");
+#endif
       break;
     case 0:
       signal(SIGHUP, SIG_DFL);
@@ -1268,12 +1320,14 @@ char **args, *ttyn;
       signal(SIGXFSZ, SIG_DFL);
 #endif
 
+#ifndef VFORK_ONLY
       displays = 0;		/* beware of Panic() */
       ServerSocket = -1;
       if (setgid(real_gid) || setuid(real_uid))
 	Panic(errno, "Setuid/gid");
       eff_uid = real_uid;
       eff_gid = real_gid;
+#endif
 #ifdef PSEUDOS
       if (!pwin)	/* ignore directory if pseudo */
 #endif
@@ -1283,7 +1337,11 @@ char **args, *ttyn;
       if (display)
 	{
 	  brktty(D_userfd);
+#ifdef VFORK_ONLY
+	  close(D_userfd);	/* freetty() would free the parent's buffers */
+#else
 	  freetty();
+#endif
 	}
       else
 	brktty(-1);
@@ -1478,6 +1536,10 @@ char **args, *ttyn;
     default:
       break;
     }
+#ifdef VFORK_ONLY
+# undef Panic
+# undef Msg
+#endif
   if (slave != -1)
     close(slave);
   return pid;

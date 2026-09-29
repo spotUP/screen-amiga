@@ -362,6 +362,45 @@ static char *locale_name(void)
   return s;
 }
 
+#ifdef VFORK_ONLY
+/*
+ * AmigaOS has no fork(). The backend is this program run again with the
+ * same arguments (vfork + exec) and SCREEN_AMIGA_MASTER in its
+ * environment: it parses them the same way, reaches the fork in main()
+ * and takes the child's branch there (0). The caller goes on as the
+ * attacher with the backend's pid, as after fork(). The program's own
+ * file comes from dos.library: argv[0] is only the name it was typed as.
+ */
+void amiga_self_path(char *buf, int max, const char *argv0);
+
+static int ac_save;
+static char **av_save;
+
+static int MasterFork(int ac, char **av)
+{
+  static char self[512];
+  int pid;
+
+  if (getenv("SCREEN_AMIGA_MASTER"))
+    {
+      unsetenv("SCREEN_AMIGA_MASTER");
+      return 0;
+    }
+  amiga_self_path(self, sizeof(self), av[0]);
+  setenv("SCREEN_AMIGA_MASTER", "1", 1);
+  fflush(stdout);
+  fflush(stderr);
+  pid = vfork();
+  if (pid == 0)
+    {
+      execv(self, av);
+      _exit(127);
+    }
+  unsetenv("SCREEN_AMIGA_MASTER");
+  return pid;
+}
+#endif
+
 int main(int ac, char** av)
 {
   register int n;
@@ -387,6 +426,10 @@ int main(int ac, char** av)
 #endif
   char *sty = 0;
 
+#ifdef VFORK_ONLY
+  ac_save = ac;
+  av_save = av;
+#endif
 #if (defined(AUX) || defined(_AUX_SOURCE)) && defined(POSIX)
   setcompat(COMPAT_POSIX|COMPAT_BSDPROT); /* turn on seteuid support */
 #endif
@@ -1250,7 +1293,11 @@ int main(int ac, char** av)
   nwin_compose(&nwin_default, &nwin_options, &nwin_default);
 
   if (!detached || dflag != 2)
+#ifdef VFORK_ONLY
+    MasterPid = MasterFork(ac_save, av_save);
+#else
     MasterPid = fork();
+#endif
   else
     MasterPid = 0;
 

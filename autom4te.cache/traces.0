@@ -1,0 +1,851 @@
+m4trace:configure.ac:9: -1- m4_pattern_forbid([^_?A[CHUM]_])
+m4trace:configure.ac:9: -1- m4_pattern_forbid([_AC_])
+m4trace:configure.ac:9: -1- m4_pattern_forbid([^LIBOBJS$], [do not use LIBOBJS directly, use AC_LIBOBJ (see section `AC_LIBOBJ vs LIBOBJS'])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^AS_FLAGS$])
+m4trace:configure.ac:9: -1- m4_pattern_forbid([^_?m4_])
+m4trace:configure.ac:9: -1- m4_pattern_forbid([^dnl$])
+m4trace:configure.ac:9: -1- m4_pattern_forbid([^_?AS_])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^SHELL$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PATH_SEPARATOR$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_NAME$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_TARNAME$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_VERSION$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_STRING$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_BUGREPORT$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_URL$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^exec_prefix$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^prefix$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^program_transform_name$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^bindir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^sbindir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^libexecdir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^datarootdir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^datadir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^sysconfdir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^sharedstatedir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^localstatedir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^runstatedir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^includedir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^oldincludedir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^docdir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^infodir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^htmldir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^dvidir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^pdfdir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^psdir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^libdir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^localedir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^mandir$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_NAME$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_TARNAME$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_VERSION$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_STRING$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_BUGREPORT$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^PACKAGE_URL$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^DEFS$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^ECHO_C$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^ECHO_N$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^ECHO_T$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^LIBS$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^build_alias$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^host_alias$])
+m4trace:configure.ac:9: -1- m4_pattern_allow([^target_alias$])
+m4trace:configure.ac:10: -1- _m4_warn([obsolete], [The macro `AC_CONFIG_HEADER' is obsolete.
+You should run autoupdate.], [./lib/autoconf/status.m4:719: AC_CONFIG_HEADER is expanded from...
+configure.ac:10: the top level])
+m4trace:configure.ac:16: -1- AC_DEFUN([AC_PROGRAM_SOURCE], [AC_REQUIRE([AC_PROG_CPP])AC_PROVIDE([$0])cat > conftest.c <<EOF
+#include "confdefs.h"
+[$1]
+_CUT_HERE_
+[$2]
+EOF
+eval "$ac_cpp conftest.c 2>&5 | sed -e '1,/_CUT_HERE_/d' -e 's/ //g' > conftest.out"
+. ./conftest.out
+rm -f conftest*
+])
+m4trace:configure.ac:39: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:39: the top level])
+m4trace:configure.ac:40: -1- m4_pattern_allow([^VERSION$])
+m4trace:configure.ac:41: -1- m4_pattern_allow([^ac_prefix_program$])
+m4trace:configure.ac:42: -1- m4_pattern_allow([^ac_prefix_program$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^CC$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^CFLAGS$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^LDFLAGS$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^LIBS$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^CPPFLAGS$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^CC$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^CC$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^CC$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^CC$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^ac_ct_CC$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^CC$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^EXEEXT$])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^OBJEXT$])
+m4trace:configure.ac:46: -1- m4_pattern_allow([^CPP$])
+m4trace:configure.ac:46: -1- m4_pattern_allow([^CPPFLAGS$])
+m4trace:configure.ac:46: -1- m4_pattern_allow([^CPP$])
+m4trace:configure.ac:47: -1- m4_pattern_allow([^GREP$])
+m4trace:configure.ac:47: -1- m4_pattern_allow([^EGREP$])
+m4trace:configure.ac:48: -1- _m4_warn([obsolete], [The macro `AC_ISC_POSIX' is obsolete.
+You should run autoupdate.], [./lib/autoconf/specific.m4:550: AC_ISC_POSIX is expanded from...
+configure.ac:48: the top level])
+m4trace:configure.ac:49: -1- _m4_warn([syntax], [AC_LINK_IFELSE was called before AC_USE_SYSTEM_EXTENSIONS], [./lib/autoconf/specific.m4:364: AC_USE_SYSTEM_EXTENSIONS is expanded from...
+configure.ac:49: the top level])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_stdio_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" stdio.h ]AS_TR_SH([stdio.h]) AS_TR_CPP([HAVE_stdio.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_stdlib_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" stdlib.h ]AS_TR_SH([stdlib.h]) AS_TR_CPP([HAVE_stdlib.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_string_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" string.h ]AS_TR_SH([string.h]) AS_TR_CPP([HAVE_string.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_inttypes_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" inttypes.h ]AS_TR_SH([inttypes.h]) AS_TR_CPP([HAVE_inttypes.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_stdint_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" stdint.h ]AS_TR_SH([stdint.h]) AS_TR_CPP([HAVE_stdint.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_strings_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" strings.h ]AS_TR_SH([strings.h]) AS_TR_CPP([HAVE_strings.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_sys_stat_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" sys/stat.h ]AS_TR_SH([sys/stat.h]) AS_TR_CPP([HAVE_sys/stat.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_sys_types_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" sys/types.h ]AS_TR_SH([sys/types.h]) AS_TR_CPP([HAVE_sys/types.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_unistd_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" unistd.h ]AS_TR_SH([unistd.h]) AS_TR_CPP([HAVE_unistd.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^STDC_HEADERS$])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_wchar_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" wchar.h ]AS_TR_SH([wchar.h]) AS_TR_CPP([HAVE_wchar.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- AC_DEFUN([_AC_Header_minix_config_h], [m4_divert_text([INIT_PREPARE],
+  [AS_VAR_APPEND([ac_header_]]_AC_LANG_ABBREV[[_list],
+  [" minix/config.h ]AS_TR_SH([minix/config.h]) AS_TR_CPP([HAVE_minix/config.h])["])])_AC_HEADERS_EXPANSION(_AC_LANG_ABBREV)])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_ALL_SOURCE$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_DARWIN_C_SOURCE$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_GNU_SOURCE$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_HPUX_ALT_XOPEN_SOCKET_API$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_NETBSD_SOURCE$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_OPENBSD_SOURCE$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_POSIX_PTHREAD_SEMANTICS$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^__STDC_WANT_IEC_60559_ATTRIBS_EXT__$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^__STDC_WANT_IEC_60559_BFP_EXT__$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^__STDC_WANT_IEC_60559_DFP_EXT__$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^__STDC_WANT_IEC_60559_FUNCS_EXT__$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^__STDC_WANT_IEC_60559_TYPES_EXT__$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^__STDC_WANT_LIB_EXT2__$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^__STDC_WANT_MATH_SPEC_FUNCS__$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_TANDEM_SOURCE$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_MINIX$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_POSIX_SOURCE$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_POSIX_1_SOURCE$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^__EXTENSIONS__$])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^_XOPEN_SOURCE$])
+m4trace:configure.ac:51: -1- m4_pattern_allow([^AWK$])
+m4trace:configure.ac:53: -1- m4_pattern_allow([^INSTALL_PROGRAM$])
+m4trace:configure.ac:53: -1- m4_pattern_allow([^INSTALL_SCRIPT$])
+m4trace:configure.ac:53: -1- m4_pattern_allow([^INSTALL_DATA$])
+m4trace:configure.ac:56: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:56: the top level])
+m4trace:configure.ac:57: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:57: the top level])
+m4trace:configure.ac:64: -1- m4_pattern_allow([^SOCKDIR$])
+m4trace:configure.ac:89: -1- m4_pattern_allow([^ISC$])
+m4trace:configure.ac:100: -1- m4_pattern_allow([^sysV68$])
+m4trace:configure.ac:104: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:104: the top level])
+m4trace:configure.ac:109: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:109: the top level])
+m4trace:configure.ac:110: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:110: the top level])
+m4trace:configure.ac:114: -1- m4_pattern_allow([^MIPS$])
+m4trace:configure.ac:115: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:115: the top level])
+m4trace:configure.ac:117: -2- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:117: the top level])
+m4trace:configure.ac:123: -3- m4_pattern_allow([^USE_WAIT2$])
+m4trace:configure.ac:118: -2- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:118: the top level])
+m4trace:configure.ac:116: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:116: the top level])
+m4trace:configure.ac:130: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:130: the top level])
+m4trace:configure.ac:140: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:140: the top level])
+m4trace:configure.ac:141: -2- m4_pattern_allow([^OSX$])
+m4trace:configure.ac:141: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:141: the top level])
+m4trace:configure.ac:147: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:147: the top level])
+m4trace:configure.ac:158: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:158: the top level])
+m4trace:configure.ac:167: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:167: the top level])
+m4trace:configure.ac:167: -2- m4_pattern_allow([^POSIX$])
+m4trace:configure.ac:170: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:170: the top level])
+m4trace:configure.ac:174: -2- m4_pattern_allow([^SYSV$])
+m4trace:configure.ac:171: -1- _m4_warn([obsolete], [The macro `AC_TRY_COMPILE' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2847: AC_TRY_COMPILE is expanded from...
+configure.ac:171: the top level])
+m4trace:configure.ac:176: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:176: the top level])
+m4trace:configure.ac:183: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:183: the top level])
+m4trace:configure.ac:189: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:189: the top level])
+m4trace:configure.ac:189: -2- m4_pattern_allow([^SVR4$])
+m4trace:configure.ac:193: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:193: the top level])
+m4trace:configure.ac:194: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:194: the top level])
+m4trace:configure.ac:194: -2- m4_pattern_allow([^BUGGYGETLOGIN$])
+m4trace:configure.ac:194: -2- m4_pattern_allow([^BUGGYGETLOGIN$])
+m4trace:configure.ac:202: -1- m4_pattern_allow([^HAVE_STROPTS_H$])
+m4trace:configure.ac:202: -1- m4_pattern_allow([^HAVE_STRING_H$])
+m4trace:configure.ac:202: -1- m4_pattern_allow([^HAVE_STRINGS_H$])
+m4trace:configure.ac:204: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:204: the top level])
+m4trace:configure.ac:234: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:234: the top level])
+m4trace:configure.ac:250: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:250: the top level])
+m4trace:configure.ac:250: -2- m4_pattern_allow([^BSDJOBS$])
+m4trace:configure.ac:250: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:250: the top level])
+m4trace:configure.ac:235: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:235: the top level])
+m4trace:configure.ac:255: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:255: the top level])
+m4trace:configure.ac:260: -2- m4_pattern_allow([^HAVE_SETRESUID$])
+m4trace:configure.ac:256: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:256: the top level])
+m4trace:configure.ac:262: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:262: the top level])
+m4trace:configure.ac:267: -2- m4_pattern_allow([^HAVE_SETREUID$])
+m4trace:configure.ac:263: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:263: the top level])
+m4trace:configure.ac:275: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:275: the top level])
+m4trace:configure.ac:284: -2- m4_pattern_allow([^HAVE_SETEUID$])
+m4trace:configure.ac:276: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:276: the top level])
+m4trace:configure.ac:287: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:287: the top level])
+m4trace:configure.ac:292: -2- m4_pattern_allow([^HAVE_EXECVPE$])
+m4trace:configure.ac:288: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:288: the top level])
+m4trace:configure.ac:299: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:299: the top level])
+m4trace:configure.ac:306: -2- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:306: the top level])
+m4trace:configure.ac:307: -2- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:307: the top level])
+m4trace:configure.ac:300: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:300: the top level])
+m4trace:configure.ac:319: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:319: the top level])
+m4trace:configure.ac:385: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:385: the top level])
+m4trace:configure.ac:386: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:386: the top level])
+m4trace:configure.ac:387: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:387: the top level])
+m4trace:configure.ac:320: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:320: the top level])
+m4trace:configure.ac:391: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:391: the top level])
+m4trace:configure.ac:436: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:436: the top level])
+m4trace:configure.ac:437: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:437: the top level])
+m4trace:configure.ac:437: -2- m4_pattern_allow([^BROKEN_PIPE$])
+m4trace:configure.ac:438: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:438: the top level])
+m4trace:configure.ac:392: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:392: the top level])
+m4trace:configure.ac:448: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:448: the top level])
+m4trace:configure.ac:503: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:503: the top level])
+m4trace:configure.ac:504: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:504: the top level])
+m4trace:configure.ac:505: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:505: the top level])
+m4trace:configure.ac:449: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:449: the top level])
+m4trace:configure.ac:509: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:509: the top level])
+m4trace:configure.ac:545: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:545: the top level])
+m4trace:configure.ac:546: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:546: the top level])
+m4trace:configure.ac:547: -2- m4_pattern_allow([^SOCK_NOT_IN_FS$])
+m4trace:configure.ac:548: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:548: the top level])
+m4trace:configure.ac:510: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:510: the top level])
+m4trace:configure.ac:657: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:657: the top level])
+m4trace:configure.ac:658: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:658: the top level])
+m4trace:configure.ac:658: -2- m4_pattern_allow([^SELECT_BROKEN$])
+m4trace:configure.ac:659: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:659: the top level])
+m4trace:configure.ac:559: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:559: the top level])
+m4trace:configure.ac:664: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:664: the top level])
+m4trace:configure.ac:673: -2- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:673: the top level])
+m4trace:configure.ac:685: -3- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:685: the top level])
+m4trace:configure.ac:693: -4- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:693: the top level])
+m4trace:configure.ac:701: -5- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:701: the top level])
+m4trace:configure.ac:709: -6- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:709: the top level])
+m4trace:configure.ac:717: -7- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:717: the top level])
+m4trace:configure.ac:725: -8- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:725: the top level])
+m4trace:configure.ac:726: -8- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:726: the top level])
+m4trace:configure.ac:718: -7- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:718: the top level])
+m4trace:configure.ac:710: -6- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:710: the top level])
+m4trace:configure.ac:702: -5- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:702: the top level])
+m4trace:configure.ac:694: -4- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:694: the top level])
+m4trace:configure.ac:686: -3- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:686: the top level])
+m4trace:configure.ac:674: -2- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:674: the top level])
+m4trace:configure.ac:665: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:665: the top level])
+m4trace:configure.ac:743: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:743: the top level])
+m4trace:configure.ac:744: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:744: the top level])
+m4trace:configure.ac:744: -2- m4_pattern_allow([^TERMINFO$])
+m4trace:configure.ac:745: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:745: the top level])
+m4trace:configure.ac:745: -2- m4_pattern_allow([^TERMINFO$])
+m4trace:configure.ac:734: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:734: the top level])
+m4trace:configure.ac:746: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:746: the top level])
+m4trace:configure.ac:747: -2- m4_pattern_allow([^NEED_OSPEED$])
+m4trace:configure.ac:747: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:747: the top level])
+m4trace:configure.ac:753: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:753: the top level])
+m4trace:configure.ac:755: -1- m4_pattern_allow([^HAVE_DEV_PTC$])
+m4trace:configure.ac:760: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:760: the top level])
+m4trace:configure.ac:763: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:763: the top level])
+m4trace:configure.ac:763: -1- m4_pattern_allow([^HAVE_SVR4_PTYS$])
+m4trace:configure.ac:772: -1- m4_pattern_allow([^HAVE_GETPT$])
+m4trace:configure.ac:776: -1- m4_pattern_allow([^HAVE_OPENPTY$])
+m4trace:configure.ac:776: -1- m4_pattern_allow([^HAVE_OPENPTY$])
+m4trace:configure.ac:781: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:781: the top level])
+m4trace:configure.ac:801: -1- m4_pattern_allow([^PTYRANGE0$])
+m4trace:configure.ac:802: -1- m4_pattern_allow([^PTYRANGE1$])
+m4trace:configure.ac:813: -1- m4_pattern_allow([^PTYMODE$])
+m4trace:configure.ac:814: -1- m4_pattern_allow([^PTYGROUP$])
+m4trace:configure.ac:817: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:817: the top level])
+m4trace:configure.ac:895: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:895: the top level])
+m4trace:configure.ac:819: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:819: the top level])
+m4trace:configure.ac:819: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2962: _AC_RUN_IFELSE is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2981: AC_RUN_IFELSE is expanded from...
+./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:819: the top level])
+m4trace:configure.ac:819: -1- m4_pattern_allow([^PTYMODE$])
+m4trace:configure.ac:819: -1- m4_pattern_allow([^PTYGROUP$])
+m4trace:configure.ac:819: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2962: _AC_RUN_IFELSE is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2981: AC_RUN_IFELSE is expanded from...
+./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:819: the top level])
+m4trace:configure.ac:819: -1- m4_pattern_allow([^WRITEPATH$])
+m4trace:configure.ac:819: -1- m4_pattern_allow([^XTERMPATH$])
+m4trace:configure.ac:819: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2962: _AC_RUN_IFELSE is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2981: AC_RUN_IFELSE is expanded from...
+./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:819: the top level])
+m4trace:configure.ac:819: -1- m4_pattern_allow([^PTYMODE$])
+m4trace:configure.ac:819: -1- m4_pattern_allow([^PTYGROUP$])
+m4trace:configure.ac:819: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2962: _AC_RUN_IFELSE is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2981: AC_RUN_IFELSE is expanded from...
+./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:819: the top level])
+m4trace:configure.ac:819: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2962: _AC_RUN_IFELSE is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2981: AC_RUN_IFELSE is expanded from...
+./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:819: the top level])
+m4trace:configure.ac:903: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:903: the top level])
+m4trace:configure.ac:917: -2- m4_pattern_allow([^GETUTENT$])
+m4trace:configure.ac:920: -2- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:920: the top level])
+m4trace:configure.ac:934: -3- m4_pattern_allow([^GETUTENT$])
+m4trace:configure.ac:921: -2- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:921: the top level])
+m4trace:configure.ac:904: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:904: the top level])
+m4trace:configure.ac:936: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:936: the top level])
+m4trace:configure.ac:946: -2- m4_pattern_allow([^UTHOST$])
+m4trace:configure.ac:937: -1- _m4_warn([obsolete], [The macro `AC_TRY_COMPILE' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2847: AC_TRY_COMPILE is expanded from...
+configure.ac:937: the top level])
+m4trace:configure.ac:949: -1- m4_pattern_allow([^HAVE_UTEMPTER$])
+m4trace:configure.ac:957: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:957: the top level])
+m4trace:configure.ac:962: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:962: the top level])
+m4trace:configure.ac:967: -2- m4_pattern_allow([^LOADAV_GETLOADAVG$])
+m4trace:configure.ac:971: -2- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:971: the top level])
+m4trace:configure.ac:976: -3- m4_pattern_allow([^LOADAV_GETLOADAVG$])
+m4trace:configure.ac:972: -2- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:972: the top level])
+m4trace:configure.ac:963: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:963: the top level])
+m4trace:configure.ac:988: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:988: the top level])
+m4trace:configure.ac:995: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:995: the top level])
+m4trace:configure.ac:997: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:997: the top level])
+m4trace:configure.ac:999: -1- m4_pattern_allow([^LOADAV_UNIX$])
+m4trace:configure.ac:1000: -1- m4_pattern_allow([^NLIST_STRUCT$])
+m4trace:configure.ac:1000: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/headers.m4:89: _AC_CHECK_HEADER_COMPILE is expanded from...
+./lib/autoconf/headers.m4:56: AC_CHECK_HEADER is expanded from...
+configure.ac:1000: the top level])
+m4trace:configure.ac:1000: -2- m4_pattern_allow([^NLIST_NAME_UNION$])
+m4trace:configure.ac:1000: -1- _m4_warn([obsolete], [The macro `AC_TRY_COMPILE' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2847: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/headers.m4:89: _AC_CHECK_HEADER_COMPILE is expanded from...
+./lib/autoconf/headers.m4:56: AC_CHECK_HEADER is expanded from...
+configure.ac:1000: the top level])
+m4trace:configure.ac:1007: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1007: the top level])
+m4trace:configure.ac:1014: -2- m4_pattern_allow([^NLIST_DECLARED$])
+m4trace:configure.ac:1016: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1016: the top level])
+m4trace:configure.ac:1019: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:1019: the top level])
+m4trace:configure.ac:1019: -1- _m4_warn([cross], [AC_RUN_IFELSE called without default to allow cross compiling], [./lib/autoconf/general.m4:2981: AC_RUN_IFELSE is expanded from...
+./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:1019: the top level])
+m4trace:configure.ac:1056: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1056: the top level])
+m4trace:configure.ac:1058: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1058: the top level])
+m4trace:configure.ac:1059: -1- m4_pattern_allow([^LOADAV_AVENRUN$])
+m4trace:configure.ac:1061: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1061: the top level])
+m4trace:configure.ac:1062: -1- m4_pattern_allow([^LOADAV_USE_NLIST64$])
+m4trace:configure.ac:1067: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1067: the top level])
+m4trace:configure.ac:1068: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1068: the top level])
+m4trace:configure.ac:1069: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1069: the top level])
+m4trace:configure.ac:1070: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1070: the top level])
+m4trace:configure.ac:1071: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1071: the top level])
+m4trace:configure.ac:1072: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1072: the top level])
+m4trace:configure.ac:1073: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1073: the top level])
+m4trace:configure.ac:1078: -1- AC_PROGRAM_SOURCE([
+#include <sys/types.h>
+#include <sys/param.h>
+], [
+#if !defined(LOADAV_GETLOADAVG) && ((defined(hp300) && !defined(__hpux)) || defined(sun) || (defined(ultrix) && defined(mips)) || defined(_SEQUENT_) || defined(sgi) || (defined(SVR4) && !defined(__hpux)) || defined(sony_news) || (!defined(__osf__) && defined(__alpha)) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX) || defined(m88k))
+loadtype=long
+# if defined(apollo) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX)
+loadscale=65536
+# else
+#  if defined(FSCALE) && !defined(__osf__)
+#   undef FSCALE
+loadscale=FSCALE
+#  else
+#   ifdef sgi
+loadtype=int
+loadscale=1024
+#   else
+#    if defined(MIPS) || defined(SVR4) || defined(m88k)
+loadscale=256
+#    else /* not MIPS */
+loadscale=1000 	/* our default value */
+#    endif /* MIPS */
+#   endif /* sgi */
+#  endif /* not FSCALE */
+# endif /* not apollo */
+#else
+loadtype=double
+loadscale=1
+#endif
+#ifdef alliant
+loadnum=4
+#else
+loadnum=3
+#endif
+])
+m4trace:configure.ac:1114: -1- m4_pattern_allow([^LOADAV$])
+m4trace:configure.ac:1115: -1- m4_pattern_allow([^LOADAV_TYPE$])
+m4trace:configure.ac:1116: -1- m4_pattern_allow([^LOADAV_NUM$])
+m4trace:configure.ac:1117: -1- m4_pattern_allow([^LOADAV_SCALE$])
+m4trace:configure.ac:1125: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1125: the top level])
+m4trace:configure.ac:1126: -1- m4_pattern_allow([^SIGVOID$])
+m4trace:configure.ac:1130: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1130: the top level])
+m4trace:configure.ac:1137: -2- m4_pattern_allow([^SIGVOID$])
+m4trace:configure.ac:1131: -1- _m4_warn([obsolete], [The macro `AC_TRY_COMPILE' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2847: AC_TRY_COMPILE is expanded from...
+configure.ac:1131: the top level])
+m4trace:configure.ac:1139: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1139: the top level])
+m4trace:configure.ac:1149: -2- m4_pattern_allow([^USESIGSET$])
+m4trace:configure.ac:1140: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1140: the top level])
+m4trace:configure.ac:1151: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1151: the top level])
+m4trace:configure.ac:1188: -2- m4_pattern_allow([^SYSVSIGS$])
+m4trace:configure.ac:1152: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:1152: the top level])
+m4trace:configure.ac:1196: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1196: the top level])
+m4trace:configure.ac:1202: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1202: the top level])
+m4trace:configure.ac:1203: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1203: the top level])
+m4trace:configure.ac:1211: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1211: the top level])
+m4trace:configure.ac:1212: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1212: the top level])
+m4trace:configure.ac:1214: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1214: the top level])
+m4trace:configure.ac:1215: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1215: the top level])
+m4trace:configure.ac:1215: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2894: _AC_LINK_IFELSE is expanded from...
+./lib/autoconf/general.m4:2911: AC_LINK_IFELSE is expanded from...
+./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1215: the top level])
+m4trace:configure.ac:1215: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2894: _AC_LINK_IFELSE is expanded from...
+./lib/autoconf/general.m4:2911: AC_LINK_IFELSE is expanded from...
+./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1215: the top level])
+m4trace:configure.ac:1215: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2894: _AC_LINK_IFELSE is expanded from...
+./lib/autoconf/general.m4:2911: AC_LINK_IFELSE is expanded from...
+./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1215: the top level])
+m4trace:configure.ac:1215: -1- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2894: _AC_LINK_IFELSE is expanded from...
+./lib/autoconf/general.m4:2911: AC_LINK_IFELSE is expanded from...
+./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+./lib/autoconf/general.m4:2894: _AC_LINK_IFELSE is expanded from...
+./lib/autoconf/general.m4:2911: AC_LINK_IFELSE is expanded from...
+./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1215: the top level])
+m4trace:configure.ac:1215: -1- m4_pattern_allow([^NOSYSLOG$])
+m4trace:configure.ac:1239: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1239: the top level])
+m4trace:configure.ac:1248: -2- m4_pattern_allow([^BSDWAIT$])
+m4trace:configure.ac:1240: -1- _m4_warn([obsolete], [The macro `AC_TRY_COMPILE' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2847: AC_TRY_COMPILE is expanded from...
+configure.ac:1240: the top level])
+m4trace:configure.ac:1251: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1251: the top level])
+m4trace:configure.ac:1252: -2- m4_pattern_allow([^TERMIO$])
+m4trace:configure.ac:1254: -3- m4_pattern_allow([^TERMIO$])
+m4trace:configure.ac:1254: -2- _m4_warn([obsolete], [The macro `AC_TRY_CPP' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2762: AC_TRY_CPP is expanded from...
+configure.ac:1254: the top level])
+m4trace:configure.ac:1252: -1- _m4_warn([obsolete], [The macro `AC_TRY_CPP' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2762: AC_TRY_CPP is expanded from...
+configure.ac:1252: the top level])
+m4trace:configure.ac:1260: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1260: the top level])
+m4trace:configure.ac:1265: -2- m4_pattern_allow([^SHADOWPW$])
+m4trace:configure.ac:1261: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1261: the top level])
+m4trace:configure.ac:1267: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1267: the top level])
+m4trace:configure.ac:1272: -2- m4_pattern_allow([^GETTTYENT$])
+m4trace:configure.ac:1268: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1268: the top level])
+m4trace:configure.ac:1274: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1274: the top level])
+m4trace:configure.ac:1279: -2- m4_pattern_allow([^HAVE_FDWALK$])
+m4trace:configure.ac:1275: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1275: the top level])
+m4trace:configure.ac:1281: -1- _m4_warn([obsolete], [The macro `AC_CHECKING' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2499: AC_CHECKING is expanded from...
+configure.ac:1281: the top level])
+m4trace:configure.ac:1299: -2- m4_pattern_allow([^USEBCOPY$])
+m4trace:configure.ac:1282: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:1282: the top level])
+m4trace:configure.ac:1319: -2- m4_pattern_allow([^USEMEMMOVE$])
+m4trace:configure.ac:1320: -2- _m4_warn([obsolete], [The macro `AC_FD_MSG' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:400: AC_FD_MSG is expanded from...
+configure.ac:1320: the top level])
+m4trace:configure.ac:1320: -2- m4_pattern_allow([^USEMEMMOVE$])
+m4trace:configure.ac:1301: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:1301: the top level])
+m4trace:configure.ac:1340: -2- m4_pattern_allow([^USEMEMCPY$])
+m4trace:configure.ac:1322: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2997: AC_TRY_RUN is expanded from...
+configure.ac:1322: the top level])
+m4trace:configure.ac:1342: -1- m4_pattern_allow([^HAVE_LONG_FILE_NAMES$])
+m4trace:configure.ac:1350: -2- m4_pattern_allow([^USEVARARGS$])
+m4trace:configure.ac:1345: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1345: the top level])
+m4trace:configure.ac:1356: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1356: the top level])
+m4trace:configure.ac:1363: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1363: the top level])
+m4trace:configure.ac:1370: -1- m4_pattern_allow([^USESETENV$])
+m4trace:configure.ac:1372: -1- m4_pattern_allow([^HAVE_SETENV_3$])
+m4trace:configure.ac:1374: -1- m4_pattern_allow([^HAVE_SETENV_2$])
+m4trace:configure.ac:1379: -2- m4_pattern_allow([^NEEDPUTENV$])
+m4trace:configure.ac:1379: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1379: the top level])
+m4trace:configure.ac:1386: -2- m4_pattern_allow([^HAVE_NL_LANGINFO$])
+m4trace:configure.ac:1382: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1382: the top level])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE_RENAME$])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE_FCHMOD$])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE_FCHOWN$])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE_STRERROR$])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE_LSTAT$])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE__EXIT$])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE_UTIMES$])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE_VSNPRINTF$])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE_GETCWD$])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE_SETLOCALE$])
+m4trace:configure.ac:1390: -1- m4_pattern_allow([^HAVE_STRFTIME$])
+m4trace:configure.ac:1403: -2- m4_pattern_allow([^USE_PAM$])
+m4trace:configure.ac:1397: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
+You should run autoupdate.], [./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+configure.ac:1397: the top level])
+m4trace:configure.ac:1413: -1- m4_pattern_allow([^USE_LOCALE$])
+m4trace:configure.ac:1417: -1- m4_pattern_allow([^BUILTIN_TELNET$])
+m4trace:configure.ac:1421: -1- m4_pattern_allow([^COLORS256$])
+m4trace:configure.ac:1425: -1- m4_pattern_allow([^RXVT_OSC$])
+m4trace:configure.ac:1442: -1- m4_pattern_allow([^ETCSCREENRC$])
+m4trace:configure.ac:1444: -1- _m4_warn([obsolete], [AC_OUTPUT should be used without arguments.
+You should run autoupdate.], [])
+m4trace:configure.ac:1444: -1- m4_pattern_allow([^LIB@&t@OBJS$])
+m4trace:configure.ac:1444: -1- m4_pattern_allow([^LTLIBOBJS$])
