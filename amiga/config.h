@@ -175,7 +175,7 @@
 
 /* #undef BUILTIN_TELNET */
 /* #undef RXVT_OSC */
-/* #undef COLORS256 */
+#define COLORS256 1 /* amiga: vtcon and RTG screens show 256 colours */
 
 
 /*
