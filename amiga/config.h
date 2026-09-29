@@ -159,7 +159,9 @@
 # define AUTO_NUKE
 # define PSEUDOS
 # define MULTI
-# define MULTIUSER
+/* amiga: one user -- no ACLs (they refused every command: "permission
+ * denied (user nobody)", ixemul having no passwd entry for the uid) */
+/* # define MULTIUSER */
 # define MAPKEYS
 # define COLOR
 # define FONT
@@ -800,3 +802,8 @@
  * run again (MasterFork), window.c's child only touches per-process
  * state before its exec. */
 #define VFORK_ONLY 1
+
+/* amiga: one user, and file systems whose protection bits are not Unix
+ * modes (RAM: keeps no group/other bits): the socket directories' owner
+ * and mode checks are Unix security with nothing to protect here. */
+#define SINGLE_USER_FS 1

@@ -1153,12 +1153,14 @@ int main(int ac, char** av)
       else {
         if (!S_ISDIR(st.st_mode))
           Panic(0, "'%s' must be a directory.", SockDir);
+#ifndef SINGLE_USER_FS
         if (eff_uid == 0 && real_uid && (int)st.st_uid != eff_uid)
           Panic(0, "Directory '%s' must be owned by root.", SockDir);
         n = (eff_uid == 0 && (real_uid || (st.st_mode & 0775) != 0775)) ? 0755 :
             (eff_gid == (int)st.st_gid && eff_gid != real_gid) ? 0775 : 0777;
         if (((int)st.st_mode & 0777) != n)
           Panic(0, "Directory '%s' must have mode %03o.", SockDir, n);
+#endif
       }
       sprintf(SockPath, "%s/S-%s", SockDir, LoginName);
       if (access(SockPath, F_OK)) {
@@ -1184,7 +1186,7 @@ int main(int ac, char** av)
 #endif
 
   {
-#ifdef SOCKDIR
+#if defined(SOCKDIR) && !defined(SINGLE_USER_FS)
 /* if SOCKDIR is not defined, the socket is in $HOME.
    in that case it does not make sense to compare uids. */
 
@@ -1193,8 +1195,10 @@ int main(int ac, char** av)
 #endif
   }
 
+#ifndef SINGLE_USER_FS
   if ((st.st_mode & 0777) != 0700)
     Panic(0, "Directory %s must have mode 700.", SockPath);
+#endif
   if (SockMatch && index(SockMatch, '/'))
     Panic(0, "Bad session name '%s'", SockMatch);
   SockName = SockPath + strlen(SockPath) + 1;

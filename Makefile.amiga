@@ -22,6 +22,14 @@ OBJS = $(addprefix obj/,$(SRCS:.c=.o)) obj/tty.o obj/kmapdef.o obj/selfpath.o
 screen: $(OBJS)
 	$(AGCC) -mcrt=ixemul -o $@ $(OBJS) $(LIBS)
 
+# comm.h numbers the commands compiled in, so it follows this config:
+# made from the host config it shifted every command after the ACL ones
+# (^A c ran "sleep"). Generated here with the cross preprocessor.
+amiga/comm.h: comm.c comm.sh amiga/config.h
+	cd amiga && srcdir=.. CC="$(AGCC) -mcrt=ixemul -I. -I.. -I$(NCURSES)/include" sh ../comm.sh
+
+$(OBJS): amiga/comm.h
+
 obj/%.o: %.c amiga/config.h
 	@mkdir -p obj
 	$(AGCC) $(CFLAGS) -c -o $@ $<
