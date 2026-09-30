@@ -3989,7 +3989,14 @@ char **cmdv;
 	}
     }
 #endif
+#ifdef VFORK_ONLY
+  /* vfork (see window.c ForkWindow): until its exec the child changes only
+   * its own descriptors, tty and signals, and reports through its stderr */
+# define Panic VforkPanic
+  switch (pid = (int)vfork())
+#else
   switch (pid = (int)fork())
+#endif
     {
     case -1:
       Msg(errno, "fork");
@@ -3998,18 +4005,26 @@ char **cmdv;
       close(slave);
       return;
     case 0:
+#ifndef VFORK_ONLY
       displays = 0;
       ServerSocket = -1;
+#endif
 #ifdef SIGPIPE
       signal(SIGPIPE, SIG_DFL);
 #endif
+#ifndef VFORK_ONLY
       if (setgid(real_gid) || setuid(real_uid))
         Panic(errno, "setuid/setgid");
       eff_uid = real_uid;
       eff_gid = real_gid;
+#endif
       brktty(D_userfd);
+#ifdef VFORK_ONLY
+      close(D_userfd);	/* freetty() would free the parent's buffers */
+#else
       freetty();
-#ifdef DEBUG
+#endif
+#if defined(DEBUG) && !defined(VFORK_ONLY)
       if (dfp && dfp != stderr)
 	  fclose(dfp);
 #endif
@@ -4071,6 +4086,9 @@ char **cmdv;
     default:
       break;
     }
+#ifdef VFORK_ONLY
+# undef Panic
+#endif
   D_blankerpid = pid;
   evenq(&D_blankerev);
   D_blocked = 4;

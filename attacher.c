@@ -736,6 +736,16 @@ LockTerminal()
     {
       signal(SIGCHLD, SIG_DFL);
       debug1("lockterminal: '%s' seems executable, execl it!\n", prg);
+#ifdef VFORK_ONLY
+      /* vfork (see window.c ForkWindow): the child only closes its own
+       * descriptors before the exec, and leaves with _exit */
+      if ((pid = vfork()) == 0)
+        {
+          closeallfiles(0);
+          execl(prg, "SCREEN-LOCK", NULL);
+          _exit(errno);
+        }
+#else
       if ((pid = fork()) == 0)
         {
           /* Child */
@@ -754,6 +764,7 @@ LockTerminal()
           execl(prg, "SCREEN-LOCK", NULL);
           exit(errno);
         }
+#endif
       if (pid == -1)
         Msg(errno, "Cannot lock terminal - fork failed");
       else

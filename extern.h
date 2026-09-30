@@ -512,3 +512,9 @@ extern int   EncodeChar __P((char *, int, int, int *));
 /* layout.c */
 extern void  RemoveLayout __P((struct layout *));
 extern int   LayoutDumpCanvas __P((struct canvas *, char *));
+
+#ifdef VFORK_ONLY
+/* amiga/vforkmsg.c: Msg and Panic for a vfork child */
+extern void  VforkMsg __P((int, const char *, ...));
+extern void  VforkPanic __P((int, const char *, ...));
+#endif

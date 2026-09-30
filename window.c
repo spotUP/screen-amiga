@@ -1205,41 +1205,6 @@ char **namep;
  * between win->w_tty and open(ttyn)
  *
  */
-#ifdef VFORK_ONLY
-#include <stdarg.h>
-/* A vfork child's messages: to its own stderr (the window's pty once it
- * is set up), never through the displays, which are the parent's. */
-static void
-VforkMsg(int err, const char *fmt, ...)
-{
-  char buf[256];
-  va_list ap;
-  int n;
-
-  va_start(ap, fmt);
-  vsnprintf(buf, sizeof(buf) - 64, fmt, ap);
-  va_end(ap);
-  n = strlen(buf);
-  if (err)
-    n += snprintf(buf + n, sizeof(buf) - n, ": %s", strerror(err));
-  buf[n++] = '\r';
-  buf[n++] = '\n';
-  write(2, buf, n);
-}
-
-static void
-VforkPanic(int err, const char *fmt, ...)
-{
-  char buf[200];
-  va_list ap;
-
-  va_start(ap, fmt);
-  vsnprintf(buf, sizeof(buf), fmt, ap);
-  va_end(ap);
-  VforkMsg(err, "%s", buf);
-  _exit(1);
-}
-#endif
 
 static int
 ForkWindow(win, args, ttyn)

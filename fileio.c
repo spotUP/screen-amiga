@@ -47,6 +47,9 @@ extern int    real_uid, eff_uid;
 extern int    real_gid, eff_gid;
 extern char  *extra_incap, *extra_outcap;
 extern char  *home, *RcFileName;
+#ifdef VFORK_ONLY
+extern char  *ShellProg;
+#endif
 extern char   SockPath[], *SockName;
 #ifdef COPY_PASTE
 extern char  *BufferFile;
@@ -708,11 +711,18 @@ printpipe(struct win *p, char *cmd)
 		WMsg(p, errno, "printing pipe");
 		return -1;
 	}
+#ifdef VFORK_ONLY
+	/* vfork (see window.c ForkWindow): the child changes only its own
+	 * descriptors and signals before the exec */
+	switch (vfork()) {
+#else
 	switch (fork()) {
+#endif
 	case -1:
 		WMsg(p, errno, "printing fork");
 		return -1;
 	case 0:
+#ifndef VFORK_ONLY
 		display = p->w_pdisplay;
 		displays = 0;
 		ServerSocket = -1;
@@ -720,19 +730,32 @@ printpipe(struct win *p, char *cmd)
 		if (dfp && dfp != stderr)
 			fclose(dfp);
 #endif
+#endif
 		close(0);
 		dup(pi[0]);
 		closeallfiles(0);
+#ifndef VFORK_ONLY
 		if (setgid(real_gid) || setuid(real_uid))
 			Panic(errno, "printpipe setuid");
 		eff_uid = real_uid;
 		eff_gid = real_gid;
+#endif
 
 #ifdef SIGPIPE
 		signal(SIGPIPE, SIG_DFL);
 #endif
+#ifdef VFORK_ONLY
+		/* no /bin/sh on AmigaOS: the shell of screen's windows ("shell"
+		 * in the screenrc, else $SHELL), without a login shell's "-" */
+		{
+			char *sh = ShellProg && *ShellProg == '-' ? ShellProg + 1 : ShellProg;
+			execl(sh, sh, "-c", cmd, (char *)0);
+			VforkPanic(errno, "%s", sh);
+		}
+#else
 		execl("/bin/sh", "sh", "-c", cmd, (char *)0);
 		Panic(errno, "/bin/sh");
+#endif
 	default:
 		break;
 	}
@@ -750,11 +773,25 @@ readpipe(char **cmdv)
 		return -1;
 	}
 
+#ifdef VFORK_ONLY
+	/* vfork (see window.c ForkWindow): the child changes only its own
+	 * descriptors and signals before the exec */
+	switch (vfork()) {
+#else
 	switch (fork()) {
+#endif
 	case -1:
 		Msg(errno, "fork");
 		return -1;
 	case 0:
+#ifdef VFORK_ONLY
+		close(1);
+		if (dup(pi[1]) != 1) {
+			close(pi[1]);
+			VforkPanic(0, "dup");
+		}
+		closeallfiles(1);
+#else
 		displays = 0;
 		ServerSocket = -1;
 #ifdef DEBUG
@@ -774,12 +811,17 @@ readpipe(char **cmdv)
 		}
 		eff_uid = real_uid;
 		eff_gid = real_gid;
+#endif
 #ifdef SIGPIPE
 		signal(SIGPIPE, SIG_DFL);
 #endif
 		execvp(*cmdv, cmdv);
 		close(1);
+#ifdef VFORK_ONLY
+		VforkPanic(errno, "%s", *cmdv);
+#else
 		Panic(errno, "%s", *cmdv);
+#endif
 	default:
 		break;
 	}
