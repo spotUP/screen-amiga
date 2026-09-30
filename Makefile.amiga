@@ -17,7 +17,7 @@ SRCS = screen.c ansi.c fileio.c mark.c misc.c resize.c socket.c \
 	sched.c teln.c nethack.c encoding.c canvas.c layout.c viewport.c \
 	list_display.c list_generic.c list_window.c
 GEN  = amiga/tty.c amiga/kmapdef.c
-OBJS = $(addprefix obj/,$(SRCS:.c=.o)) obj/tty.o obj/kmapdef.o obj/selfpath.o obj/vforkmsg.o
+OBJS = $(addprefix obj/,$(SRCS:.c=.o)) obj/tty.o obj/kmapdef.o obj/vforkmsg.o
 
 screen: $(OBJS)
 	$(AGCC) -mcrt=ixemul -o $@ $(OBJS) $(LIBS)

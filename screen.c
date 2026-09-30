@@ -371,7 +371,6 @@ static char *locale_name(void)
  * attacher with the backend's pid, as after fork(). The program's own
  * file comes from dos.library: argv[0] is only the name it was typed as.
  */
-void amiga_self_path(char *buf, int max, const char *argv0);
 
 static int ac_save;
 static char **av_save;
@@ -386,7 +385,7 @@ static int MasterFork(int ac, char **av)
       unsetenv("SCREEN_AMIGA_MASTER");
       return 0;
     }
-  amiga_self_path(self, sizeof(self), av[0]);
+  ix_self_path(self, sizeof(self), av[0]);
   setenv("SCREEN_AMIGA_MASTER", "1", 1);
   fflush(stdout);
   fflush(stderr);
