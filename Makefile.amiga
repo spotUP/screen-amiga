@@ -3,8 +3,11 @@
 #   make -f Makefile.amiga         -> screen (m68k, needs ixemul 48.2 UP-Term)
 # amiga/ holds config.h (hand-made, see its head) and the files screen's
 # build generates with host tools (comm.h term.h kmapdef.c tty.c osdef.h).
+# The workspace directory (the upterm meta-repo creates it); this repo is
+# screen-amiga/src in it.
+UPTERM_ROOT ?= $(abspath $(CURDIR)/../..)
 AGCC    ?= $(HOME)/opt/amiga/bin/m68k-amigaos-gcc
-NCURSES ?= $(HOME)/Code/vtcon/build/rig/vtc/pkgs/ncurses-5.5-1-p-bin-m68k
+NCURSES ?= $(UPTERM_ROOT)/vtcon/build/rig/vtc/pkgs/ncurses-5.5-1-p-bin-m68k
 CFLAGS  = -mcrt=ixemul -O2 -fgnu89-inline -Wall -Wno-unused -Wno-parentheses -Iamiga -I. \
           -I$(NCURSES)/include -I$(NCURSES)/include/ncurses \
           -DETCSCREENRC='"/ENV/screenrc"' -DSCREENENCODINGS='"/ENV/screen/utf8encodings"' -DGIT_REV='"4.9.1-amiga"'
