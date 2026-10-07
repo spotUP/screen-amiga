@@ -23,7 +23,7 @@ GEN  = amiga/tty.c amiga/kmapdef.c
 OBJS = $(addprefix obj/,$(SRCS:.c=.o)) obj/tty.o obj/kmapdef.o obj/vforkmsg.o
 
 screen: $(OBJS)
-	$(AGCC) -mcrt=ixemul -o $@ $(OBJS) $(LIBS)
+	$(AGCC) -mcrt=ixemul -s -o $@ $(OBJS) $(LIBS)
 
 # comm.h numbers the commands compiled in, so it follows this config:
 # made from the host config it shifted every command after the ACL ones
